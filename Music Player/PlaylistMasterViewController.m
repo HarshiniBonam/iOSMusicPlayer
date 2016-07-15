@@ -35,4 +35,9 @@
     }
 }
 
+- (IBAction)showPlaylistDetail:(id)sender {
+    [self performSegueWithIdentifier: @"showPlaylistDetail" sender: sender];
+}
+
+
 @end

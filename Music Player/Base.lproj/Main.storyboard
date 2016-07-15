@@ -17,42 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVy-RS-2lp">
-                                <rect key="frame" x="126" y="392" width="69" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tbp-k3-tOb" kind="push" identifier="showPlaylistDetail" id="Yqk-Wy-RSl"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-ar-QId">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-ar-QId">
                                 <rect key="frame" x="59" y="184" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="J56-ms-Vji"/>
                                     <constraint firstAttribute="width" constant="200" id="ikA-fd-YtV"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vrp-zk-lYQ" appends="YES" id="uqj-dQ-PSa"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="IVy-RS-2lp" secondAttribute="centerX" id="Hew-Zq-coy"/>
                             <constraint firstAttribute="centerX" secondItem="DxW-ar-QId" secondAttribute="centerX" id="ZAD-Nu-bWN"/>
                             <constraint firstAttribute="centerY" secondItem="DxW-ar-QId" secondAttribute="centerY" id="w0O-jb-WQd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="wVb-t4-kln"/>
                     <connections>
-                        <outlet property="AButton" destination="IVy-RS-2lp" id="xdr-Ta-Xc1"/>
                         <outlet property="playlistImageView0" destination="DxW-ar-QId" id="h2J-j7-Nc8"/>
+                        <segue destination="tbp-k3-tOb" kind="push" identifier="showPlaylistDetail" id="k3S-Jv-uqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vrp-zk-lYQ">
+                    <connections>
+                        <action selector="showPlaylistDetail:" destination="vXZ-lx-hvc" id="7rx-hm-MaY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136" y="318"/>
+            <point key="canvasLocation" x="139" y="318"/>
         </scene>
         <!--Artists-->
         <scene sceneID="TXQ-7B-w9m">
